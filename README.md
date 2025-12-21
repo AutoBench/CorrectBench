@@ -43,6 +43,7 @@ see [requirements.txt](requirements.txt):
 - PyYAML==6.0.2
 - Requests==2.32.3
 - tiktoken==0.7.0
+- httpx==0.27.2
 
 
 ### LLM API keys
