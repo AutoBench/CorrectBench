@@ -79,6 +79,7 @@ class TaskTBcheck():
         self.corrector = TB_corrector(self.corrector_mode, self.pychecker_en, self.circuit_type)
         self.improver = SPEC_improver(description, "naive", self.pychecker_en, self.main_model, self.circuit_type)
         # rtl list and number
+        self.rtl_newly_gen_num = 0
         if self.rtl_list is None:
             # self.rtl_num = rtl_num
             self.set_rtl_num(rtl_num)
@@ -90,7 +91,6 @@ class TaskTBcheck():
         self.wrong_scen_num = 0 # a small number as default, will be replaced later
         self.previous_wrong_scen_num = 9999 # a very large number as default, will be replaced later
         self.TB_syntax_error = False
-        self.rtl_newly_gen_num = 0
         # tb analysis results
         self.tb_pass = None
         self.wrong_col_index = None
